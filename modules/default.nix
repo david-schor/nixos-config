@@ -17,6 +17,9 @@
     # git
     ./git.nix
 
+    # picom
+    ./picom.nix
+
     # zsh
     ./zsh.nix
 
