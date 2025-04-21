@@ -20,6 +20,8 @@
     [ { device = "/dev/disk/by-uuid/69a45c96-1e72-4d7c-b974-af088e07b8a3"; }
     ];
 
+  powerManagement.cpuFreqGovernor = "performance";
+
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
