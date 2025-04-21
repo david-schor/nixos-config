@@ -8,4 +8,4 @@ This configurations is mostly used as a VM on 'VMware Workstation' -> if it flac
 
 ## Screenshots
 
-<a href="./screenshots/screen.png"><img src="./screenshots/screen.png"></a>
+[![Screenshot](./screenshots/screen.png)](./screenshots/screen.png)
