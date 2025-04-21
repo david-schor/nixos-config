@@ -27,11 +27,12 @@
           always = true;
           notification = false;
         }
+        {
+          command = "polybar --reload mainbar &";
+          always = true;
+          notification = false;
+        }
       ];
     };
-    extraConfig = ''
-      exec --no-startup-id polybar mainbar &
-      #exec --no-startup-id feh --bg-scale /home/david/.config/wallpaper/wallpaper.jpg &
-    '';
   };
 }
