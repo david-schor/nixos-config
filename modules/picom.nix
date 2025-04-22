@@ -9,6 +9,8 @@
     settings = {
       corner-radius = 8;
       use-damage = false;
+      vsync = true;
+      refresh-rate = 180;
       xrender-sync-fence = false;
       blur = {
         method = "dual_kawase";
