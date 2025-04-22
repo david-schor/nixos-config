@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    neofetch
-  ];
-
   xdg.configFile."neofetch/config.conf".text = ''
     # https://github.com/dylanaraps/neofetch/wiki/Customizing-Info
     print_info() {
