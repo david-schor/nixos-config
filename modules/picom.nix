@@ -8,10 +8,13 @@
     backend = "glx";
     settings = {
       corner-radius = 8;
+      use-damage = false;
+      xrender-sync-fence = false;
       blur = {
         method = "dual_kawase";
         size = 10;
       };
+      fade = true;
       rounded-corners-exclude = [
         "class_i = 'polybar'"
       ];
