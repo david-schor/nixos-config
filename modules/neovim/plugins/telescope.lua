@@ -1,9 +1,16 @@
-require('telescope').setup{
-  defaults = {
-    file_ignore_patterns = {"node_modules", ".git"},
-  },
-}
+local telescope = require("telescope")
+local icons = require("nvim-nonicons")
 
-vim.api.nvim_set_keymap('n', '<leader>ff', ':Telescope find_files<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>fg', ':Telescope live_grep<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>fb', ':Telescope buffers<CR>', { noremap = true, silent = true })
+telescope.setup({
+  defaults = {
+    prompt_prefix = "  " .. icons.get("telescope") .. "  ",
+    selection_caret = " ❯ ",
+    entry_prefix = "   ",
+  },
+  pickers = {},
+  extensions = {},
+})
+
+vim.keymap.set("n", "<Leader>f", require("telescope.builtin").find_files)
+vim.keymap.set("n", "<Leader>t", require("telescope.builtin").treesitter)
+
