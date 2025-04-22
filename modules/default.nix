@@ -5,6 +5,9 @@
     # wm
     ./i3wm.nix
 
+    # lazygit
+    ./lazygit.nix
+
     # polybar
     ./polybar.nix
 
