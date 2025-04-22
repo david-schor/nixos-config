@@ -3,5 +3,5 @@
 {
   programs.lazygit = {
     enable = true;
-  }
+  };
 }
