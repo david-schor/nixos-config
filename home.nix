@@ -11,6 +11,7 @@
   home.packages = with pkgs; [
     xsel
     wget
+    ripgrep
   ];
 
   imports = [
