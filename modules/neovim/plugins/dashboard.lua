@@ -1,10 +1,36 @@
-vim.g.dashboard_default_executive = 'telescope'
-vim.g.dashboard_custom_header = {
-  'Welcome to Neovim',
-}
-vim.g.dashboard_custom_shortcut = {
-  a = 'Find File',
-  f = 'Find File',
-  r = 'Recent Files',
-  t = 'Find Text',
-}
+require("dashboard").setup({
+  config = {
+    header = {
+      " ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗",
+      " ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║",
+      " ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║",
+      " ██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║",
+      " ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║",
+      " ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝",
+      "                                                       ",
+    },
+    shortcut = {
+      {
+        icon = "󰝒 ",
+        desc = "New File ",
+        group = "DashboardHeader",
+        action = "enew",
+        key = "o",
+      },
+      {
+        icon = " ",
+        desc = "Find Files ",
+        group = "DashboardHeader",
+        action = "Telescope find_files",
+        key = "f",
+      },
+      {
+        icon = " ",
+        desc = "Settings ",
+        group = "DashboardHeader",
+        action = "edit ~/.config/nvim",
+        key = "v",
+      },
+    },
+  },
+})
