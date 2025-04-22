@@ -11,6 +11,9 @@
     # ghostty
     ./ghostty.nix
 
+    # neovim
+    ./neovim
+
     # fonts
     ./fonts.nix
 
