@@ -1,22 +1,27 @@
-require('bufferline').setup({
+require("bufferline").setup({
   options = {
     numbers = "none",
-    close_command = "bdelete! %d",
+    close_command = "bdelete %d",
+    right_mouse_command = "bdelete %d",
     left_mouse_command = "buffer %d",
-    indicator = {
-      style = "icon",
-      icon = "▎",
-    },
-    buffer_close_icon = "",
+    middle_mouse_command = nil,
+    indicator = { style = "icon", icon = "▎" },
+    buffer_close_icon = "",
+    modified_icon = "●",
+    close_icon = "",
+    left_trunc_marker = "",
+    right_trunc_marker = "",
+    max_name_length = 18,
+    max_prefix_length = 15,
+    tab_size = 18,
+    diagnostics = false,
+    offsets = {},
     show_buffer_icons = true,
     show_buffer_close_icons = true,
-    always_show_bufferline = true,
+    show_tab_indicators = true,
+    persist_buffer_sort = true,
     separator_style = "thin",
     enforce_regular_tabs = false,
-    persist_buffer_sort = true,
+    always_show_bufferline = true,
   },
 })
-
-vim.api.nvim_set_keymap('n', '<C-h>', ':BufferLineCyclePrev<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-l>', ':BufferLineCycleNext<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-w>', ':BufferLinePickClose<CR>', { noremap = true, silent = true })
