@@ -12,6 +12,10 @@
     xsel
     wget
     ripgrep
+    outils
+    openssl
+    python3
+    go
   ];
 
   imports = [
