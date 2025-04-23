@@ -1,6 +1,12 @@
 { pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    lua-language-server
+    pyright
+    gopls
+  ];
+
   programs.neovim = {
     enable = true;
     viAlias = true;
@@ -50,6 +56,16 @@
         type = "lua";
         config = builtins.readFile ./plugins/dashboard.lua;
       }
+      {
+        plugin = lazygit-nvim;
+        type = "lua";
+        config = builtins.readFile ./plugins/lazygit.lua;
+      }
+
+      nvim-nonicons
+      cmp-buffer
+      cmp-path
+      cmp-nvim-lsp
     ];
 
     extraLuaConfig = ''
