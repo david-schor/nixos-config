@@ -28,8 +28,5 @@
 
     # zsh
     ./zsh.nix
-
-    # neofetch
-    ./neofetch.nix
   ];
 }
