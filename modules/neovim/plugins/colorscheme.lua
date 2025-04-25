@@ -1,0 +1,1 @@
+/nix/store/g2wf0ppllrmy5b653zig08l2v27nk77x-home-manager-files/.dotfiles/modules/neovim/plugins/colorscheme.lua
