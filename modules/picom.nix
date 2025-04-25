@@ -3,20 +3,18 @@
 {
   services.picom = {
     enable = true;
-    activeOpacity = 0.8;
-    inactiveOpacity = 0.6;
     backend = "glx";
+    fade = true;
+    shadow = true;
+    shadowOpacity = 0.75;
+    shadowExclude = [
+      "class_i = 'polybar'"
+    ];
+    vSync = true;
     settings = {
       corner-radius = 8;
       use-damage = false;
-      vsync = true;
       refresh-rate = 180;
-      xrender-sync-fence = false;
-      blur = {
-        method = "dual_kawase";
-        size = 10;
-      };
-      fade = true;
       rounded-corners-exclude = [
         "class_i = 'polybar'"
       ];
