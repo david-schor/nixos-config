@@ -4,6 +4,9 @@
 
 { config, pkgs, ... }:
 
+let 
+  config = import ../modules/config/config.nix;
+in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -60,7 +63,7 @@
   users.users.david = {
     isNormalUser = true;
     description = "david";
-    shell = pkgs.zsh;
+    shell = pkgs.${config.shell};
     ignoreShellProgramCheck = true;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
