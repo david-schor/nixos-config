@@ -24,13 +24,6 @@ require("dashboard").setup({
         action = "Telescope find_files",
         key = "f",
       },
-      {
-        icon = " ",
-        desc = "Settings ",
-        group = "DashboardHeader",
-        action = "edit ~/.config/nvim",
-        key = "v",
-      },
     },
   },
 })
