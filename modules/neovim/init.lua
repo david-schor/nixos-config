@@ -1,3 +1,7 @@
+require("nvim-web-devicons")
+
+package.path = package.path .. ";/home/david/.dotfiles/modules/neovim/plugins/?.lua"
+
 vim.keymap.set({'n', 'x', 'o'}, 'gy', '"+y', {desc = 'Copy to clipboard'})
 vim.keymap.set({'n', 'x', 'o'}, 'gp', '"+p', {desc = 'Paste clipboard text'})
 

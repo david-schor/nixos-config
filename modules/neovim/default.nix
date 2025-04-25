@@ -1,6 +1,25 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
+let
+  colors = import ../config/colors.nix;
+
+  toLua = attrs: ''
+    -- Auto-generated from colors.nix
+    return {
+    ${builtins.concatStringsSep "\n" (
+      lib.mapAttrsToList (name: val: 
+        let
+          key = builtins.replaceStrings ["-"] ["_"] name;
+        in
+          "  ${key} = \"${val}\","
+      ) attrs
+    )}
+    }
+  '';
+in
 {
+  home.file.".dotfiles/modules/neovim/plugins/colorscheme.lua".text = toLua colors;
+
   home.packages = with pkgs; [
     lua-language-server
     pyright
@@ -62,7 +81,7 @@
         config = builtins.readFile ./plugins/lazygit.lua;
       }
 
-      nvim-nonicons
+      nvim-web-devicons
       cmp-buffer
       cmp-path
       cmp-nvim-lsp
