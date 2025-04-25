@@ -1,5 +1,8 @@
 { pkgs, ... }:
 
+let
+  config = import ./config/config.nix;
+in
 {
   home.packages = with pkgs; [
     feh
@@ -11,7 +14,7 @@
     config = {
       bars = []; # needed for polybar
       modifier = "Mod4";
-      terminal = "ghostty";
+      terminal = config.terminal;
       gaps = {
         inner = 10;
         outer = 5;
@@ -23,7 +26,7 @@
           notification = false;
         }
         {
-          command = "ghostty";
+          command = "${config.terminal}";
           always = true;
           notification = false;
         }
