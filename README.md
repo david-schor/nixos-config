@@ -50,10 +50,10 @@ Simply clone the repository in `~/.dotfiles/` and run the nix cmds.
 git clone https://github.com/david-schor/nixos-config.git
 ```
 ```bash
-sudo nixos-rebuild switch .#nixos
+sudo nixos-rebuild switch --flake .#nixos
 ```
 ```bash
-home-manager switch .#nixos
+home-manager switch --flake .#nixos
 ```
 Just don't forget to configure some personal things.
 
